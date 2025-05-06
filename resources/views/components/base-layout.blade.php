@@ -22,7 +22,7 @@
                 </nav>
 
             </div>
-            {{$slot}}
+           
         </header>
 
         <main class="container mx-auto mt-8">
@@ -36,7 +36,7 @@
                     Lees Meer
                 </a>
             </section>
-
+            {{$slot}}
             <section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white shadow-md rounded-lg p-6">
                     <h3 class="text-xl font-bold mb-2">Voor Studenten</h3>
