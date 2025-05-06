@@ -22,11 +22,11 @@
                 </nav>
 
             </div>
-
+            {{$slot}}
         </header>
 
         <main class="container mx-auto mt-8">
-            {{$slot}}
+            
             <section class="text-center">
                 <h2 class="text-4xl font-bold mb-4">Welkom bij de BPV Samenwerking</h2>
                 <p class="text-lg mb-6">
