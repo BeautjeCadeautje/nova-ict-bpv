@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\NewController;
-
+use App\Http\Controllers\EducationController;
 use App\Http\Controllers\InternshipController;
 use Illuminate\Support\Facades\Route;
  
@@ -27,3 +27,4 @@ Route::get('/links', [NewController::class, 'links']);
 Route::get('/companies', [NewController::class, 'companies']);
 Route::get('/about', [NewController::class, 'about']);
 Route::get('/internships', [InternshipController::class, 'index']);
+Route::get('/educations', [EducationController::class, 'index']);
