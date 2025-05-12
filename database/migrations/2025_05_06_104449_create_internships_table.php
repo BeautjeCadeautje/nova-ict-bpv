@@ -23,6 +23,10 @@ return new class extends Migration
             $table->string('level_of_education');
             $table->string('created_at');
             $table->string('updated_at')->nullable();
+
+            $table->unsignedBigInteger('company_id')->nullable();
+
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             
         });
     }

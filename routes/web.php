@@ -26,5 +26,13 @@ Route::get('/links', [NewController::class, 'links']);
 // });
 Route::get('/companies', [NewController::class, 'companies']);
 Route::get('/about', [NewController::class, 'about']);
-Route::get('/internships', [InternshipController::class, 'index']);
-Route::get('/educations', [EducationController::class, 'index']);
+
+Route::get('/internships', [InternshipController::class, 'index'])->name('internships.index');
+Route::get('/internships/create', [InternshipController::class, 'create'])->name('internships.create'); // <-- verplaatst
+Route::post('/internships', [ InternshipController::class, 'store' ]);
+Route::get('/internships/{id}', [InternshipController::class, 'show'])->name('internships.show');
+
+
+Route::get('/educations', [EducationController::class, 'index'])->name('educations.index');
+Route::get('/educations/{id}', [EducationController::class, 'show'])->name('educations.show');
+

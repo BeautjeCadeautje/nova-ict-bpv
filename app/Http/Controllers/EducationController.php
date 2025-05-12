@@ -9,6 +9,12 @@ class EducationController extends Controller
     public function index()
     {
         $educations = DB::table('educations')->get();
-        return view('educations', compact('educations'));
+        return view('educations.index', compact('educations'));
+    }
+
+    public function show($id)
+    {
+        $education = DB::table('educations')->find($id);
+        return view('educations.show', compact('education'));
     }
 }
