@@ -16,6 +16,8 @@ class EducationSeeder extends Seeder
             'name' => 'software engineer',
             'slug' => '01',
             'description' => 'Webbureau Van Steen voor al uw websites en apps',
+            'level' => 'HBO',
+            'duration' => '4 jaar',
             
         ]);
 
@@ -23,6 +25,8 @@ class EducationSeeder extends Seeder
             'name' => 'backend engineer',
             'slug' => '02',
             'description' => 'Webbureau Van Steen voor al uw websites en apps',
+            'level' => 'HBO',
+            'duration' => '4 jaar',
             
         ]);
     }

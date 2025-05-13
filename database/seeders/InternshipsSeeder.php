@@ -15,6 +15,7 @@ class InternshipsSeeder extends Seeder
         DB::table('internships')->insert([
             'title' => 'Webbureau Van Steen',
             'slug' => 'webbureau-van-steen',
+            'description' => 'Een stage bij Webbureau Van Steen biedt je de kans om praktijkervaring op te doen in een dynamische omgeving.',
             'start_date' => '31 augustus 2023',
             'end_date' => '31 januari 2024',
             'hours_per_week' => '32',
@@ -27,6 +28,7 @@ class InternshipsSeeder extends Seeder
         DB::table('internships')->insert([
             'title' => 'AWebbureau Van Steen',
             'slug' => 'Awebbureau-van-steen',
+            'description' => 'AEen stage bij Webbureau Van Steen biedt je de kans om praktijkervaring op te doen in een dynamische omgeving.',
             'start_date' => 'A31 augustus 2023',
             'end_date' => 'A31 januari 2024',
             'hours_per_week' => 'A32',
