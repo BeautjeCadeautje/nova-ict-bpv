@@ -1,5 +1,5 @@
 <x-base-layout>
     <h1>
-        {{ $title }}
+        {{ $name }}
     </h1>
 </x-base-layout>
