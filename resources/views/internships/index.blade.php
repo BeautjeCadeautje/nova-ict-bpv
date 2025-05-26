@@ -11,6 +11,7 @@
                 <p><strong>Startdatum:</strong> {{ $internship->start_date }}</p>
                 <p><strong>Einddatum:</strong> {{ $internship->end_date ?? 'n.v.t.' }}</p>
                 <p><strong>Type:</strong> {{ $internship->type }}</p>
+                <p><strong>Bedrijf:</strong> {{ $internship->company->name ?? 'Onbekend' }}</p>
                 <p><strong>Uren per week:</strong> {{ $internship->hours_per_week }}</p>
             </li></br>
         @endforeach

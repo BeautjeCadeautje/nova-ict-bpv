@@ -6,13 +6,13 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Internship;
+use App\Models\Company;
 
 class InternshipController extends Controller
 {
     public function index()
     {
-        // $internships = DB::table('internships')->get();
-        $internships = Internship::all();
+        $internships = Internship::with('company')->get();
         return view('internships.index', compact('internships'));
     }
 
@@ -25,8 +25,10 @@ class InternshipController extends Controller
 
     public function create()
     {
-        return view('internships.create');
+        $companies = Company::all();
+        return view('internships.create', compact('companies'));
     }
+
 
     public function store(Request $request)
     {
@@ -39,7 +41,7 @@ class InternshipController extends Controller
             'compensation' => 'required',
             'type' => 'required',
             'level_of_education' => 'required'
-           
+
         ]);
 
         // DB::table('internships')->insert([

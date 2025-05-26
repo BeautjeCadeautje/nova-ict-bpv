@@ -2,13 +2,13 @@
     <h1>Nieuwe stage toevoegen</h1>
 
     @if ($errors->any())
-        <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 20px;">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+    <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 20px;">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     @endif
 
     <form action="/internships" method="POST">
@@ -34,6 +34,13 @@
 
         <label for="type">Type</label><br>
         <input type="text" name="type" id="type" value="{{ old('type') }}"><br><br>
+
+        <select name="company_id">
+            @foreach ($companies as $company)
+            <option value="{{ $company->id }}">{{ $company->name }}</option>
+            @endforeach
+        </select><br><br>
+
 
         <label for="level_of_education">Opleidingsniveau</label><br>
         <input type="text" name="level_of_education" id="level_of_education" value="{{ old('level_of_education') }}"><br><br>

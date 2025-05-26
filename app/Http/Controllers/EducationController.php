@@ -44,13 +44,12 @@ class EducationController extends Controller
             'duration' => 'required',
         ]);
 
-        // Genereer de slug uit de naam
-        $slug = Str::slug($request->name);
+       
 
         // Voeg de opleiding toe aan de database
         DB::table('educations')->insert([
             'name' => $request->name,
-            'slug' => $slug, // De slug is nu ingevuld
+            'slug'  => Str::slug($request->name),
             'description' => $request->description,
             'level' => $request->level,
             'duration' => $request->duration,
