@@ -35,6 +35,7 @@
         <label for="type">Type</label><br>
         <input type="text" name="type" id="type" value="{{ old('type') }}"><br><br>
 
+        <label for="bedrijf">Bedrijf</label><br>
         <select name="company_id">
             @foreach ($companies as $company)
             <option value="{{ $company->id }}">{{ $company->name }}</option>
@@ -42,7 +43,7 @@
         </select><br><br>
 
         <div>
-            <label for="educations">Opleidingen:</label>
+            <label for="educations">Opleiding:</label>
             <select id="educations" name="educations[]" multiple>
                 @foreach ($educations as $education)
                 <option value="{{ $education->id }}">{{ $education->name }}</option>
