@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Internship;
 use App\Models\Company;
+use App\Models\Education;
 
 class InternshipController extends Controller
 {
@@ -23,12 +24,13 @@ class InternshipController extends Controller
         return view('internships.show', compact('internship'));
     }
 
-    public function create()
+  
+    public function create(Request $request)
     {
         $companies = Company::all();
-        return view('internships.create', compact('companies'));
+        $educations = Education::all();
+        return view('internships.create', compact('companies', 'educations'));
     }
-
 
     public function store(Request $request)
     {

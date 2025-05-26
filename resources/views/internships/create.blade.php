@@ -41,6 +41,16 @@
             @endforeach
         </select><br><br>
 
+        <div>
+            <label for="educations">Opleidingen:</label>
+            <select id="educations" name="educations[]" multiple>
+                @foreach ($educations as $education)
+                <option value="{{ $education->id }}">{{ $education->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <br><br>
+
 
         <label for="level_of_education">Opleidingsniveau</label><br>
         <input type="text" name="level_of_education" id="level_of_education" value="{{ old('level_of_education') }}"><br><br>

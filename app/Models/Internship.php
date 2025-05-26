@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Company; // 👈 deze toevoegen
+use App\Models\Education; // 👈 deze toevoegen
 
 class Internship extends Model
 {
@@ -25,5 +26,10 @@ class Internship extends Model
     public function company()
     {
         return $this->belongsTo(Company::class);
+    }
+
+     public function educations()
+    {
+        return $this->belongsToMany(Education::class);
     }
 }
